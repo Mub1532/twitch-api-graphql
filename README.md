@@ -27,15 +27,26 @@ import TwitchClient from "@Mub1532/twitch-api-graphql";
 const client = new TwitchClient(<clientID>: optional);
 
 async function example(){
+    const game = await client.fetchGameByName("Rocket League");
     const streamer = await client.fetchUserByID("32787655");
     
-    console.log(streamer);
+    console.log(game,streamer);
 }
 
 example()
 ```
 
 Returns: 
+
+```json
+{
+   "id": "30921",
+   "displayName": "Rocket League",
+   "avatarURL": "https://static-cdn.jtvnw.net/ttv-boxart/30921-{width}x{height}.jpg",
+   "description": "Rocket League is a high-powered hybrid of arcade-style soccer and vehicular mayhem with easy-to-understand controls and fluid, physics-driven competition. Rocket League includes casual and competitive Online Matches, a fully-featured offline Season Mode, special “Mutators” that let you change the rules entirely, hockey and basketball-inspired Extra Modes, and more than 500 trillion possible cosmetic customization combinations.",
+   "followersCount": 16137031
+}
+```
 
 ```json
 {
