@@ -19,7 +19,7 @@
     "axios": "^1.1.3"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "tsc && typedoc src/index.ts --name Twitch-API-GraphQL",
     "lint": "eslint . --ext .ts --fix"
   },
   "keywords": [
