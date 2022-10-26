@@ -10,6 +10,7 @@
   "private": false,
   "devDependencies": {
     "@angablue/eslint-config": "^1.4.1",
+    "@types/node": "^18.11.7",
     "prettier": "^2.7.1",
     "typescript": "*"
   },

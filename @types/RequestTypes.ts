@@ -1,7 +1,7 @@
 export type RequestData = {
     variables?: Object;
     query?: string;
-}
+};
 
 export type TwitchRoles = { isPartner: boolean };
 
@@ -24,12 +24,12 @@ export type TwitchStream = {
 };
 
 export type TwitchUser = {
-            id: string;
-            login: string;
-            displayName: string;
-            description: string;
-            createdAt: Date;
-            roles: TwitchRoles;
-            profileImageURL: string;
-            stream: TwitchStream | null;
+    id: string;
+    login: string;
+    displayName: string;
+    description: string;
+    createdAt: Date;
+    roles: TwitchRoles;
+    profileImageURL: string;
+    stream: TwitchStream | null;
 };
