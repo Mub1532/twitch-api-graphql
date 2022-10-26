@@ -1,4 +1,18 @@
-# Twitch Graph QL API Wrapper
+# Twitch GraphQL API Wrapper
+
+## Setup
+
+After installing with your preferred package manager, initialise using new TwitchClient (or whatever you import it as).
+
+```ts
+import TwitchClient from "@Mub1532/twitch-api-graphql";
+
+const client = new TwitchClient(<clientID>: optional);
+```
+
+## Methods
+
+- **fetchUserByID(userID:string)**. Fetches a user by their twitch id. Returns a Twitch user object defined in /@types/RequestTypes.ts
 
 ## Example
 
