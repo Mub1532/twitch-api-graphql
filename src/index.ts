@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 import { readFileSync } from 'fs';
-import { RequestData, TwitchUser } from '../@types/RequestTypes';
+import { RequestData, TwitchGame, TwitchUser } from '../@types/RequestTypes';
 
 export default class TwitchClient {
     clientID = 'kimne78kx3ncx6brgo4mv6wki5h1ko';
@@ -54,5 +54,21 @@ export default class TwitchClient {
         });
 
         return request.data.user as TwitchUser | null;
+    }
+
+    /**
+     * Fetches a twitch game and returns its info, null if not found.
+     * @param {string} name The name of the game. Eg Rocket League.
+     * @returns {TwitchGame | null}
+     */
+
+    async fetchGameByName(name: string): Promise<TwitchGame | null> {
+        const schema = readFileSync(`${__dirname}/../schemas/getGame.gql`).toString();
+
+        const request = await this.request(schema, {
+            name
+        });
+
+        return request.data.game as TwitchGame | null;
     }
 }

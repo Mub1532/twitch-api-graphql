@@ -1,0 +1,9 @@
+query GetGame($name: String!) {
+  game(name: $name){
+      id
+      displayName
+      avatarURL
+      description
+      followersCount
+  }
+}

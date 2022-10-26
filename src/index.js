@@ -51,5 +51,17 @@ class TwitchClient {
         });
         return request.data.user;
     }
+    /**
+     * Fetches a twitch game and returns its info, null if not found.
+     * @param {string} name The name of the game. Eg Rocket League.
+     * @returns {TwitchGame | null}
+     */
+    async fetchGameByName(name) {
+        const schema = (0, fs_1.readFileSync)(`${__dirname}/../schemas/getGame.gql`).toString();
+        const request = await this.request(schema, {
+            name
+        });
+        return request.data.game;
+    }
 }
 exports.default = TwitchClient;

@@ -1,4 +1,4 @@
-import { TwitchUser } from '../@types/RequestTypes';
+import { TwitchGame, TwitchUser } from '../@types/RequestTypes';
 export default class TwitchClient {
     clientID: string;
     constructor(clientID?: string);
@@ -10,4 +10,10 @@ export default class TwitchClient {
      * @returns {TwitchUser | null}
      */
     fetchUserByID(userID: string): Promise<TwitchUser | null>;
+    /**
+     * Fetches a twitch game and returns its info, null if not found.
+     * @param {string} name The name of the game. Eg Rocket League.
+     * @returns {TwitchGame | null}
+     */
+    fetchGameByName(name: string): Promise<TwitchGame | null>;
 }
