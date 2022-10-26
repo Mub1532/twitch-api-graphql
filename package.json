@@ -20,5 +20,10 @@
   "scripts": {
     "build": "tsc",
     "lint": "eslint . --ext .ts --fix"
-  }
+  },
+  "keywords": [
+    "twitch",
+    "graphql",
+    "api"
+  ]
 }
