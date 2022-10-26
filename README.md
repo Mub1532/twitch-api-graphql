@@ -12,7 +12,10 @@ const client = new TwitchClient(<clientID>: optional);
 
 ## Methods
 
-- **fetchUserByID(userID:string)**. Fetches a user by their twitch id. Returns a Twitch user object defined in /@types/RequestTypes.ts
+- **fetchUserByID(userID:string)**. Fetches a user by their twitch id. Returns a Twitch user object defined in /@types/RequestTypes.ts, null if not found.
+
+- **fetchGameByName(name:string)**. Fetches a twitch game and returns a Twitch game object defined in /@types/RequestTypes.ts, null if not found.
+
 
 ## Example
 
