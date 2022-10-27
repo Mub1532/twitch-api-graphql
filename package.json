@@ -2,7 +2,7 @@
   "name": "twitch-api-graphql",
   "version": "1.0.1",
   "description": "An Api wrapper around the Twitch GraphQL API made with TypeScript.",
-  "main": "build/src/index.js",
+  "main": "build/index.js",
   "repository": "https://github.com/Mub1532/twitch-api-graphql",
   "author": "Mub1532",
   "license": "MIT",

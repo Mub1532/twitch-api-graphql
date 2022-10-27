@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 import { readFileSync } from 'fs';
-import { NodeStream, RequestData, TwitchGame, TwitchResponse, TwitchUser } from '../@types/RequestTypes';
+import { NodeStream, RequestData, TwitchGame, TwitchResponse, TwitchUser } from './@types/RequestTypes';
 
 export default class TwitchClient {
     clientID = 'kimne78kx3ncx6brgo4mv6wki5h1ko';
