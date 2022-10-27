@@ -1,0 +1,26 @@
+query getFeed($platformType: PlatformType!) {
+  streams(platformType: $platformType) {
+    edges {
+      node {
+        id
+        title
+        previewImageURL
+        type
+        viewersCount
+        game {
+          id
+          displayName
+          avatarURL
+          description
+          followersCount
+        }
+        broadcaster {
+          id
+          displayName
+          login
+          profileImageURL(width: 50)
+        }
+      }
+    }
+  }
+}

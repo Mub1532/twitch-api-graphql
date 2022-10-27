@@ -1,9 +1,8 @@
 {
   "name": "twitch-api-graphql",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An Api wrapper around the Twitch GraphQL API made with TypeScript.",
   "main": "build/index.js",
-  "types": "build/index.d.ts",
   "repository": "https://github.com/Mub1532/twitch-api-graphql",
   "author": "Mub1532",
   "license": "MIT",
@@ -13,6 +12,7 @@
     "@types/node": "^18.11.7",
     "prettier": "^2.7.1",
     "typedoc": "^0.23.18",
+    "typedoc-plugin-missing-exports": "^1.0.0",
     "typescript": "*"
   },
   "dependencies": {
@@ -25,6 +25,7 @@
   "keywords": [
     "twitch",
     "graphql",
-    "api"
+    "api",
+    "wrapper"
   ]
 }

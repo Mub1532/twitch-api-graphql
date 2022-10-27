@@ -1,2 +1,5 @@
 /docs
 /.github
+/@types
+/src
+package-lock.json
