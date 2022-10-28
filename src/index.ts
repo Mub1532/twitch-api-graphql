@@ -68,6 +68,24 @@ export default class TwitchClient {
     }
 
     /**
+     * Fetches a twitch user by their username and returns their info and streaming status, if there is no user it will return null.
+     * @param {string} username The Twitch ID of the user you want to fetch.
+     * @returns {TwitchUser | null}
+     */
+
+    async fetchUserByName(username: string): Promise<TwitchUser | null> {
+        const schema = readFileSync(`${__dirname}/../schemas/getUserbyName.gql`).toString();
+
+        const request = await this.request(schema, {
+            login: username
+        });
+
+        if (!request.data) throw new Error('No response data.');
+
+        return request.data?.user;
+    }
+
+    /**
      * Fetches a twitch game and returns its info, null if not found.
      * @param {string} name The name of the game. Eg Rocket League.
      * @returns {TwitchGame | null}

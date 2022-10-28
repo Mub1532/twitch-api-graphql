@@ -1,0 +1,28 @@
+query fetchUserbyName($login: String!) {
+  user(login: $login) {
+    id
+    login
+    displayName
+    description
+    createdAt
+    profileImageURL(width: 70){}
+    roles {
+      isPartner
+    }
+    stream {
+      id
+      title
+      type
+      viewersCount
+      createdAt
+      previewImageURL
+      game {
+        id
+        displayName
+        avatarURL
+        description
+        followersCount
+      }
+    }
+  }
+}
